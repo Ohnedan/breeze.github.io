@@ -8,8 +8,8 @@ body {
 }
 
 .letter-i {
-    width: 80vh; /* Размер логотипа */
-    height: 80vh;
+    width: 10vh; /* Размер логотипа */
+    height: 10vh;
     margin-bottom: 20px; /* Отступ между логотипом и списком */
 }
 
