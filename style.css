@@ -1,0 +1,54 @@
+body {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.list {
+  width: 500px;
+  height: 200px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  background-color: white;
+  transition-duration: .5s;
+  list-style-type: none;
+}
+
+.item {
+  background-color: deepskyblue;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.list:not(.animate) .item {
+  transition-duration: .5s;
+  transition-property: transform, visibility;
+  transform: translateX(-20%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.list.animate .item1 {
+  animation: list-show .2s 1;
+}
+.list.animate .item2 {
+  animation: list-show .4s 1;
+}
+.list.animate .item3 {
+  animation: list-show .6s 1;
+}
+
+@keyframes list-show {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
