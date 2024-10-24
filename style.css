@@ -1,5 +1,5 @@
 body {
-    background-color: magenta;
+    background-color: black; /* Установите черный фон */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +23,12 @@ body {
 }
 
 .item {
-    background-color: darkmagenta;
-    height: 40px;
-    margin-top: 10px;
+  background-color: lightblue; /* Замените на желаемый цвет */
+  height: 40px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list:not(.animate) .item {
