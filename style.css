@@ -1,54 +1,46 @@
 body {
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
+    display: flex;
+    flex-direction: column; /* Убедитесь, что элементы располагаются вертикально */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
 }
 
 .list {
-  width: 500px;
-  height: 200px;
-  padding: 20px 30px;
-  box-sizing: border-box;
-  background-color: white;
-  transition-duration: .5s;
-  list-style-type: none;
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 20px 0; /* Добавляем отступы сверху и снизу */
+    color: white; /* Цвет текста */
 }
 
-.item {
-  background-color: deepskyblue;
-  height: 40px;
-  margin-top: 10px;
+.letter-i {
+    width: 80vh;
+    height: 80vh;
 }
 
-.list:not(.animate) .item {
-  transition-duration: .5s;
-  transition-property: transform, visibility;
-  transform: translateX(-20%);
-  visibility: hidden;
-  opacity: 0;
+.cls-1 {
+    --delay: calc(var(--item) * 1s);
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-dasharray: 1500;
+    animation: lines 4s infinite var(--delay);
 }
 
-.list.animate .item1 {
-  animation: list-show .2s 1;
-}
-.list.animate .item2 {
-  animation: list-show .4s 1;
-}
-.list.animate .item3 {
-  animation: list-show .6s 1;
+.dot {
+    stroke-dasharray: 500;
+    stroke: var(--color);
 }
 
-@keyframes list-show {
-    from {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(20%);
-    }
-    to {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0);
+.stem {
+    stroke: var(--color);
+}
+
+@keyframes lines {
+    100% {
+        stroke-dashoffset: 3000;
     }
 }
